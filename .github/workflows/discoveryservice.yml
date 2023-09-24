@@ -19,7 +19,7 @@ jobs:
       - name: show dir
         run: ls
       - name: change to ./DiscoveryService
-        run: cd /DiscoveryService
+        run: cd ./DiscoveryService
       - name: Build with maven
         run: maven clean install -DskipTests
       - name: upload artifacts
