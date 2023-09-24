@@ -16,12 +16,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: show dir
-        run: ls
       - name: change to ./DiscoveryService
         run: cd ./DiscoveryService
       - name: Build with maven
-        run: maven clean install -DskipTests
+        run: mvn clean install -DskipTests
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
