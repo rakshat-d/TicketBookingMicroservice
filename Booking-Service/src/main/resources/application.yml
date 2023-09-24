@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: booking-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/booking-db?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+server:
+  port: 9050
+  servlet:
+    context-path: /api/v1/movie-booking/booking
+
+logging:
+  level:
+    "*": INFO
+  file:
+    path: .
+    name: application.log
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true

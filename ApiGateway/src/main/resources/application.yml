@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: ApiGateway
+  cloud:
+    gateway:
+      httpclient:
+        ssl:
+          trusted-x509-certificates:
+            - "classpath:truststore/rootCACert.pem"
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: city-routes
+          uri: lb://city-service/api/v1/movie-booking/city
+          predicates:
+            - Path=/api/v1/movie-booking/city/**
+        - id: theatre-service
+          uri: lb://theatre-service/api/v1/movie-booking/theatre
+          predicates:
+            - Path=/api/v1/movie-booking/theatre/**
+        - id: movie-service
+          uri: lb://movie-service/api/v1/movie-booking/movie
+          predicates:
+            - Path=/api/v1/movie-booking/movie/**
+        - id: booking-service
+          uri: lb://booking-service/api/v1/movie-booking/booking
+          predicates:
+            - Path=/api/v1/movie-booking/booking/**
+
+server:
+  port: 9000
+  servlet:
+    context-path: api/v1/movie-booking/
+  ssl:
+    enabled: true
+    key-store: "classpath:keystore/serverKeystore.p12"
+    key-store-type: PKCS12
+    key-store-password: 12345678
+    protocol: TLS
+    client-auth: need
+    trust-store-type: PKCS12
+    trust-store: "classpath:truststore/truststore.p12"
+    trust-store-password: 12345678
+
+
+eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
+logging:
+  level:
+    root: INFO
+
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+
+#server.ssl.client-auth=need
+#
+#server.ssl.trust-store-type=PKCS12
+#server.ssl.trust-store=classpath:truststore/truststore.p12
+#server.ssl.trust-store-password=12345678
+

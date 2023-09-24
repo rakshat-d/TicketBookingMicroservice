@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: city-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/city-db?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+server:
+  port: 9010
+  servlet:
+    context-path: /api/v1/movie-booking/city
+#  ssl:
+#    enabled: true
+#    key-store-type: PKCS12
+#    key-store: "classpath:keystore/serverKeystore.p12"
+#    key-store-password: 12345678
+#    protocol: TLS
+
+logging:
+  level:
+    "*": INFO
+  file:
+    path: .
+    name: application.log
+
+eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#    webclient:
+#      enabled: true
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+#    non-secure-port-enabled: false
+#    secure-port-enabled: true
+#    status-page-url: 'https://localhost:${server.port}/info'
+#    health-check-url: 'https://localhost:${server.port}/health'
+#    home-page-url: 'https://localhost:${server.port}/'
