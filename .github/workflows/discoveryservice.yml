@@ -16,7 +16,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: change to /DiscoveryService
+      - name: show dir
+        run: ls
+      - name: change to ./DiscoveryService
         run: cd /DiscoveryService
       - name: Build with maven
         run: maven clean install -DskipTests
