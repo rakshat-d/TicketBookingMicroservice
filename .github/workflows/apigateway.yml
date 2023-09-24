@@ -42,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-actions@v3.5.0
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${ secrets.DOCKER_REPOSITORY }}
+          images: ${{ secrets.DOCKER_USERNAME }}/${ secrets.DOCKER_API_GATEWAY_REPOSITORY }}
       - name: build and push
         uses: docker/build-push-action@v3.0.0
         with:
