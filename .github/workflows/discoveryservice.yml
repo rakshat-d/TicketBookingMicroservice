@@ -16,15 +16,19 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+      - name: ls
+        run: ls
       - name: change to ./DiscoveryService
         run: cd ./DiscoveryService
+      - name: ls
+        run: ls
       - name: Build with maven
-        run: mvn clean install -DskipTests
+        run: mvn --projects DiscoveryService -am clean install -DskipTests
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: jars
-          path: target/*.jar
+          path: ./DiscoveryService/target/*.jar
   deployDockerImage:
     needs: build
     runs-on: ubuntu-latest
