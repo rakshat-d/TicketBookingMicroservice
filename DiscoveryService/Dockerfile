@@ -1,4 +1,4 @@
 FROM wonderd/jre-alpine
 WORKDIR /app
-COPY ./target/*.jar .
+COPY ./DiscoveryService.jar ./DiscoveryService.jar
 CMD ["java","-jar","DiscoveryService.jar"]
