@@ -23,7 +23,6 @@ services:
     environment:
       SPRING_APPLICATION_JSON: '{
         "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
-        "server.ssl.enabled" : false,
         "server.ssl.client-need" : "none"
       }'
   city-service:
