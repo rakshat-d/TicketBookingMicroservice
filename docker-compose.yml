@@ -8,8 +8,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 'root'
       MYSQL_ROOT_USER: 'root'
-    volumes:
-      - db:/var/lib/mysql
   eureka-container:
     restart: always
     image: "pixalquarks/bookingsystemdiscoveryservice"
