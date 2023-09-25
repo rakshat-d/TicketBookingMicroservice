@@ -1,4 +1,4 @@
 FROM wonderd/jre-alpine
 WORKDIR /app
-COPY ./target/*.jar .
+COPY ./TheatreService.jar ./TheatreService.jar
 CMD ["java","-jar","TheatreService.jar"]

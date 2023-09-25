@@ -1,9 +1,9 @@
-name : Build ApiGateway Docker Image
+name : Build City-Service Docker Image
 on:
   push:
     branches: ["master"]
     paths:
-      - "ApiGateway/*"
+      - "City-Service/*"
   workflow_dispatch:
 jobs:
   build:
@@ -17,12 +17,12 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with maven
-        run: mvn --projects ApiGateway -am clean install -DskipTests
+        run: mvn --projects City-Service -am clean install -DskipTests
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: jars
-          path: ./ApiGateway/target/*.jar
+          path: ./City-Service/target/*.jar
   deployDockerContainer:
     runs-on: ubuntu-latest
     needs: build
@@ -41,14 +41,14 @@ jobs:
         id: meta1
         uses: docker/metadata-action@v3.5.0
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_API_GATEWAY_REPOSITORY }}
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_CITY_SERVICE_REPOSITORY }}
       - name: list
         run: ls
       - name: build and push
         uses: docker/build-push-action@v3.0.0
         with:
           context: .
-          file: ./ApiGateway/Dockerfile
+          file: ./City-Service/Dockerfile
           push: true
           tags: ${{ steps.meta1.outputs.tags }}
           labels: ${{ steps.meta1.outputs.labels }}
