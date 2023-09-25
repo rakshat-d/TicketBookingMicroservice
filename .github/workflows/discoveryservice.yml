@@ -23,9 +23,9 @@ jobs:
         with:
           name: jars
           path: ./DiscoveryService/target/*.jar
-  deployDockerImage:
-    needs: build
+  deployDockerContainer:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - uses: actions/checkout@v3
       - name: download artifacts
@@ -41,11 +41,11 @@ jobs:
         id: meta1
         uses: docker/metadata-action@v3.5.0
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${ secrets.DOCKER_DISCOVERY_SERVICE_REPOSITORY }}
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_DISCOVERY_SERVICE_REPOSITORY }}
       - name: build and push
         uses: docker/build-push-action@v3.0.0
         with:
           context: ./DiscoveryService
           push: true
-          tags: ${{ steps.meta1.outputs.tags }}
-          labels: ${{ steps.meta1.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
