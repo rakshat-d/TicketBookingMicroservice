@@ -16,12 +16,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: ls
-        run: ls
-      - name: change to ./DiscoveryService
-        run: cd ./DiscoveryService
-      - name: ls
-        run: ls
       - name: Build with maven
         run: mvn --projects DiscoveryService -am clean install -DskipTests
       - name: upload artifacts
@@ -44,7 +38,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: extract metadata
-        id: meta
+        id: meta1
         uses: docker/metadata-action@v3.5.0
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/${ secrets.DOCKER_DISCOVERY_SERVICE_REPOSITORY }}
@@ -53,5 +47,5 @@ jobs:
         with:
           context: ./DiscoveryService
           push: true
-          tags: ${{ steps.meta.output.tags }}
-          labels: ${{ steps.meta.output.labels }}
+          tags: ${{ steps.meta1.output.tags }}
+          labels: ${{ steps.meta1.output.labels }}
