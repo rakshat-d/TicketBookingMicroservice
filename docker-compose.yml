@@ -10,12 +10,12 @@ services:
       MYSQL_ROOT_USER: 'root'
   eureka-container:
     restart: always
-    image: "pixalquarks/bookingsystemdiscoveryservice"
+    image: "pixalquarks/bookingsystemdiscoveryservice:master"
     ports:
       - "8761:8761"
   api-gateway:
     restart: always
-    image: "pixalquarks/bookingsystemapigateway"
+    image: "pixalquarks/bookingsystemapigateway:master"
     ports:
       - "9000:9000"
 
