@@ -47,7 +47,8 @@ jobs:
       - name: build and push
         uses: docker/build-push-action@v3.0.0
         with:
-          context: ./DiscoveryService
+          context: .
+          file: ./DiscoveryService/Dockerfile
           push: true
           tags: ${{ steps.meta1.outputs.tags }}
           labels: ${{ steps.meta1.outputs.labels }}
