@@ -14,13 +14,17 @@ services:
     ports:
       - "8761:8761"
   api-gateway:
+    depends_on:
+      - eureka-container
     restart: always
     image: "pixalquarks/bookingsystemapigateway:master"
     ports:
       - "9000:9000"
     environment:
       SPRING_APPLICATION_JSON: '{
-        "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/"
+        "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
+        "server.ssl.enabled" : false,
+        "server.ssl.client-need" : "none"
       }'
   city-service:
     depends_on:
