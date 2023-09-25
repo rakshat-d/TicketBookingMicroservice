@@ -45,7 +45,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: extract metadata
         id: meta
-        uses: docker/metadata-actions@v3.5.0
+        uses: docker/metadata-action@v3.5.0
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/${ secrets.DOCKER_DISCOVERY_SERVICE_REPOSITORY }}
       - name: build and push
