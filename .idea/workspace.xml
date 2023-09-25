@@ -4,101 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/keystore/serverKeystore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/truststore/clientTruststore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/truststore/rootCACert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/truststore/rootTruststore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/truststore/truststore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Aspect/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/BookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Controller/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/DTO/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/DTO/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/DTO/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/DTO/Theatre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/DTO/TheatreResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/DTO/TicketRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Entities/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Exceptions/DuplicateEntryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Exceptions/IdNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Handler/CustomExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Repository/BookingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Services/BookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/java/org/movieBooking/Services/BookingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Booking-Service/src/test/java/org/movieBooking/Controller/BookingControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Aspect/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/CityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Controller/CityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/DTO/CityRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/DTO/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/DTO/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Entities/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Exceptions/DuplicateEntryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Exceptions/IdNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Handler/CustomExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Repository/CityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Services/CityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/Services/CityServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/resources/keystore/serverKeystore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/resources/truststore/clientTruststore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/resources/truststore/rootTruststore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/main/resources/truststore/truststore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/test/java/com/movieBooking/ServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/test/java/org/movieBooking/Controller/CityControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/City-Service/src/test/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DiscoveryService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DiscoveryService/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Aspect/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Controller/MovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/DTO/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/DTO/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/DTO/MovieRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Entities/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Exceptions/DuplicateEntryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Exceptions/IdNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Handler/CustomExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/MovieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Repository/MovieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Services/MovieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/java/org/movieBooking/Services/MovieServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movie-Service/src/test/java/movieBooking/ServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Aspect/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Controller/TheatreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/DTO/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/DTO/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/DTO/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/DTO/TheatreRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/DTO/TheatreResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Entities/Theatre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Exceptions/DuplicateEntryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Exceptions/IdNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Handler/CustomExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Repository/TheatreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Services/TheatreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/Services/TheatreServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/java/org/movieBooking/TheatreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theatre-Service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Fixed incorrect dir in workflow">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/discoveryservice.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/discoveryservice.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Projects/MovieBooking/ApiGateway/src/main/resources",
+    "last_opened_file_path": "C:/Projects/MovieBooking/.github/workflows",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -144,11 +51,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Projects\MovieBooking\ApiGateway\src\main\resources" />
-      <recent name="C:\Projects\MovieBooking\City-Service\src\main\resources" />
-      <recent name="C:\Projects\MovieBooking\ApiGateway" />
-      <recent name="C:\Projects\MovieBooking\Booking-Service\src\main\resources" />
-      <recent name="C:\Projects\MovieBooking\Theatre-Service\src\main\resources" />
+      <recent name="C:\Projects\MovieBooking\.github\workflows" />
+      <recent name="C:\Projects\MovieBooking\Theatre-Service" />
+      <recent name="C:\Projects\MovieBooking\Movie-Service" />
+      <recent name="C:\Projects\MovieBooking\DiscoveryService" />
+      <recent name="C:\Projects\MovieBooking\City-Service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\MovieBooking\ApiGateway\src\main\java\org.movieBooking" />
@@ -160,6 +67,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn test" />
+      <command value="mvn clean install -DskipTests" />
     </option>
   </component>
   <component name="RunManager" selected="Application.ApiGateway">
@@ -284,7 +192,76 @@
       <option name="presentableId" value="Default" />
       <updated>1695274069123</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1695540312018</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695540312018</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed Final Name and added docker files">
+      <option name="closed" value="true" />
+      <created>1695584282955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695584282955</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added workflow for ApiGateway and DiscoveryService">
+      <option name="closed" value="true" />
+      <created>1695585702526</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695585702526</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changes secrets variable name for repository">
+      <option name="closed" value="true" />
+      <created>1695585811717</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695585811717</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added workflow_dispatch trigger">
+      <option name="closed" value="true" />
+      <created>1695586140991</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695586140991</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed incorrect dir in workflow">
+      <option name="closed" value="true" />
+      <created>1695586343669</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695586343669</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="Changed Final Name and added docker files" />
+    <MESSAGE value="Added workflow for ApiGateway and DiscoveryService" />
+    <MESSAGE value="Changes secrets variable name for repository" />
+    <MESSAGE value="Added workflow_dispatch trigger" />
+    <MESSAGE value="Fixed incorrect dir in workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed incorrect dir in workflow" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MovieBooking$TheatreServiceImplTest.ic" NAME="TheatreServiceImplTest Coverage Results" MODIFIED="1695356207981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
