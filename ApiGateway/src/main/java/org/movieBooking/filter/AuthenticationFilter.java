@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
+import org.springframework.core.env.Environment;
 import org.springframework.core.io.buffer.DataBufferFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -34,7 +35,8 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
 
 
 //    List<String> excludedUrls = new ArrayList<>(List.of("/auth/add", "/auth/login", "/customer/addCustomer", "/actuator"));
-    @Value("api.routes.ignored")
+    @Autowired
+    PropertyConfig propertyConfig;
     List<String> excludedUrls;
     @Autowired private WebClient.Builder webClientBuilder;
 
@@ -50,8 +52,13 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     @Override
     public GatewayFilter apply(Config config) {
         return (exchange, chain) -> {
+            if (excludedUrls == null) {
+                excludedUrls = propertyConfig.getPropertyList("api.routes.excluded");
+            }
             ServerHttpRequest request = exchange.getRequest();
             log.info("**************************************************************************");
+            log.info("Excluded URLS: " + propertyConfig.getPropertyList("api.routes.excluded"));
+            log.info("ABC: " + propertyConfig.getProperty("abc"));
             log.info("URL is - " + request.getURI().getPath());
             String bearerToken = request.getHeaders().getFirst("Authorization");
             log.info("Bearer Token: "+ bearerToken);

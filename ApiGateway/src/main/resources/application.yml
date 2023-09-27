@@ -59,9 +59,9 @@ server:
 
 api:
   routes:
-    ignored:
-      - "/api/v1/movie-booking/actuator"
-      - "/api/v1/movie-booking/auth/create"
+    excluded: "/api/v1/movie-booking/actuator,/api/v1/movie-booking/auth/create"
+
+abc: 123
 
 eureka:
 #  client:

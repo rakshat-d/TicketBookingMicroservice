@@ -1,6 +1,6 @@
 spring:
   application:
-    name: authentication-server
+    name: authentication-service
   datasource:
     url: jdbc:mysql://localhost:3306/auth?createDatabaseIfNotExist=true
     username: root

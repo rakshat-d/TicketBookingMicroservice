@@ -4,59 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Changes docker compose">
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/entities/Authorities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/entities/ConnValidationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/entities/ExceptionResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthorizationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/HttpsRedirectionFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/LoggingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/AppConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/SecurityConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/Utilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/ApplicationUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/ConnValidationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/JwtAuthenticationModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/SeqGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/TokensEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/exceptions/AuthenticationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/exceptions/UserDetailsNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/exceptions/UsernameAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/filters/ExceptionHandlerFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/filters/RestAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/handler/CustomExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/repository/TokensRedisRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/repository/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/ApplicationUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/AuthenticationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/EncryptorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTVerifierFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/UserPermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/services/TokensRedisService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/services/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/utils/PasswordConstraintValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/utils/ValidPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Added Dockerfile and action for auth service">
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/PropertyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/City-Service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/City-Service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authentication-Service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication-Service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +47,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Projects/MovieBooking/ApiGateway/src/main/java/org/movieBooking",
+    "last_opened_file_path": "C:/Projects/MovieBooking/.github/workflows",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -102,11 +56,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\MovieBooking\.github\workflows" />
+      <recent name="C:\Projects\MovieBooking\Authentication-Service" />
       <recent name="C:\Projects\MovieBooking\ApiGateway\src\main\java\org\movieBooking" />
       <recent name="C:\Projects\MovieBooking\Authentication-Service\src\main\java\org\movieBooking\dto" />
       <recent name="C:\Projects\MovieBooking\Authentication-Service\src\main\java\org\movieBooking" />
-      <recent name="C:\Projects\MovieBooking\.github\workflows" />
-      <recent name="C:\Projects\MovieBooking\Theatre-Service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\MovieBooking\ApiGateway\src\main\java\org.movieBooking" />
@@ -227,8 +181,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApiGateway" />
-        <item itemvalue="Application.CityService" />
         <item itemvalue="Application.AuthenticationService" />
+        <item itemvalue="Application.CityService" />
         <item itemvalue="Application.MovieService" />
         <item itemvalue="Application.DiscoveryService" />
       </list>
@@ -387,7 +341,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695640620882</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added Authentication Server and Integrated Api Gateway with it">
+      <option name="closed" value="true" />
+      <created>1695789860703</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1695789860703</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added Dockerfile and action for auth service">
+      <option name="closed" value="true" />
+      <created>1695790535959</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1695790535959</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +382,9 @@
     <MESSAGE value="Updated Dockerfiles" />
     <MESSAGE value="Test Docker Compose" />
     <MESSAGE value="Changes docker compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes docker compose" />
+    <MESSAGE value="Added Authentication Server and Integrated Api Gateway with it" />
+    <MESSAGE value="Added Dockerfile and action for auth service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Dockerfile and action for auth service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -421,6 +393,11 @@
           <url>file://$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTVerifierFilter.java</url>
           <line>42</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthenticationFilter.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/controller/AuthenticationController.java</url>
