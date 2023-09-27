@@ -16,7 +16,7 @@ spring:
         enabled: false
 
 server:
-  port: 9010
+  port: 0
   servlet:
     context-path: /api/v1/movie-booking/city
   ssl:

@@ -12,7 +12,7 @@ spring:
     show-sql: false
 
 server:
-  port: 9040
+  port: 0
   servlet:
     context-path: /api/v1/movie-booking/theatre
 
