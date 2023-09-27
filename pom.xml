@@ -15,6 +15,7 @@
         <module>Booking-Service</module>
         <module>DiscoveryService</module>
         <module>ApiGateway</module>
+        <module>Authentication-Service</module>
     </modules>
 
     <properties>

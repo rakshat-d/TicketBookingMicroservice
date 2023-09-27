@@ -4,8 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Fixed incorrect dir in workflow">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/discoveryservice.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/discoveryservice.yml" afterDir="false" />
+    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Changes docker compose">
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/entities/Authorities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/entities/ConnValidationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/entities/ExceptionResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthorizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/HttpsRedirectionFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/LoggingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/AppConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/SecurityConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/Utilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/ApplicationUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/Error.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/ConnValidationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/JwtAuthenticationModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/SeqGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/TokensEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/exceptions/AuthenticationFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/exceptions/UserDetailsNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/exceptions/UsernameAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/filters/ExceptionHandlerFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/filters/RestAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/handler/CustomExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/repository/TokensRedisRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/repository/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/ApplicationUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/AuthenticationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/EncryptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTVerifierFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/UserPermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/services/TokensRedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/services/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/utils/PasswordConstraintValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/utils/ValidPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Authentication-Service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/City-Service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/City-Service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +93,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Projects/MovieBooking/.github/workflows",
+    "last_opened_file_path": "C:/Projects/MovieBooking/ApiGateway/src/main/java/org/movieBooking",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -51,11 +102,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\MovieBooking\ApiGateway\src\main\java\org\movieBooking" />
+      <recent name="C:\Projects\MovieBooking\Authentication-Service\src\main\java\org\movieBooking\dto" />
+      <recent name="C:\Projects\MovieBooking\Authentication-Service\src\main\java\org\movieBooking" />
       <recent name="C:\Projects\MovieBooking\.github\workflows" />
       <recent name="C:\Projects\MovieBooking\Theatre-Service" />
-      <recent name="C:\Projects\MovieBooking\Movie-Service" />
-      <recent name="C:\Projects\MovieBooking\DiscoveryService" />
-      <recent name="C:\Projects\MovieBooking\City-Service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\MovieBooking\ApiGateway\src\main\java\org.movieBooking" />
@@ -76,7 +127,7 @@
       <module name="ApiGateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.movieBooking.*" />
+          <option name="PATTERN" value="org.movieBooking.handler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.movieBooking.BookingService" />
-      <module name="Booking-Service" />
+    <configuration name="AuthenticationService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.movieBooking.AuthenticationService" />
+      <module name="Authentication-Service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.movieBooking.*" />
+          <option name="PATTERN" value="org.movieBooking.handler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,7 +153,7 @@
       <module name="City-Service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.movieBooking.*" />
+          <option name="PATTERN" value="org.movieBooking.handler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,7 +166,7 @@
       <module name="DiscoveryService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.movieBooking.*" />
+          <option name="PATTERN" value="org.movieBooking.handler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,7 +179,7 @@
       <module name="Movie-Service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.movieBooking.*" />
+          <option name="PATTERN" value="org.movieBooking.handler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,8 +216,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.ApiGateway" />
+      <item itemvalue="Application.AuthenticationService" />
       <item itemvalue="Application.DiscoveryService" />
-      <item itemvalue="Application.BookingService" />
       <item itemvalue="Application.MovieService" />
       <item itemvalue="Application.CityService" />
       <item itemvalue="Diffblue Cover.Write tests for class CityController" />
@@ -176,10 +227,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApiGateway" />
+        <item itemvalue="Application.CityService" />
+        <item itemvalue="Application.AuthenticationService" />
         <item itemvalue="Application.MovieService" />
         <item itemvalue="Application.DiscoveryService" />
-        <item itemvalue="Application.CityService" />
-        <item itemvalue="Application.BookingService" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +291,103 @@
       <option name="project" value="LOCAL" />
       <updated>1695586343669</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed Dockerfiles">
+      <option name="closed" value="true" />
+      <created>1695625278342</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695625278342</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated Dockerfiles">
+      <option name="closed" value="true" />
+      <created>1695626570815</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695626570815</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Test Docker Compose">
+      <option name="closed" value="true" />
+      <created>1695633771334</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695633771334</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695634087250</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695634087250</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695634253244</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695634253244</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695634324772</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695634324772</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695634908787</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695634908787</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695635689703</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695635689703</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695636255694</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1695636255694</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695637402606</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695637402606</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695638691187</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1695638691187</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Changes docker compose">
+      <option name="closed" value="true" />
+      <created>1695640620882</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1695640620882</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +408,67 @@
     <MESSAGE value="Changes secrets variable name for repository" />
     <MESSAGE value="Added workflow_dispatch trigger" />
     <MESSAGE value="Fixed incorrect dir in workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed incorrect dir in workflow" />
+    <MESSAGE value="Fixed Dockerfiles" />
+    <MESSAGE value="Updated Dockerfiles" />
+    <MESSAGE value="Test Docker Compose" />
+    <MESSAGE value="Changes docker compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes docker compose" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTVerifierFilter.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/controller/AuthenticationController.java</url>
+          <line>39</line>
+          <properties class="org.movieBooking.controller.AuthenticationController" method="addUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTAuthenticationFilter.java</url>
+          <line>60</line>
+          <properties class="org.movieBooking.security.JWTAuthenticationFilter" method="successfulAuthentication">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/JWTVerifierFilter.java</url>
+          <line>39</line>
+          <properties class="org.movieBooking.security.JWTVerifierFilter" method="doFilterInternal">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/LoggingFilter.java</url>
+          <line>18</line>
+          <properties class="org.movieBooking.filter.LoggingFilter" method="filter">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/LoggingFilter.java</url>
+          <line>30</line>
+          <properties class="org.movieBooking.filter.LoggingFilter" method="PostLogging">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MovieBooking$TheatreServiceImplTest.ic" NAME="TheatreServiceImplTest Coverage Results" MODIFIED="1695356207981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

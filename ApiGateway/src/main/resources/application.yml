@@ -15,18 +15,32 @@ spring:
           uri: lb://city-service/api/v1/movie-booking/city
           predicates:
             - Path=/api/v1/movie-booking/city/**
+          filters:
+            - AuthenticationFilter
         - id: theatre-service
           uri: lb://theatre-service/api/v1/movie-booking/theatre
           predicates:
             - Path=/api/v1/movie-booking/theatre/**
+          filters:
+            - AuthenticationFilter
         - id: movie-service
           uri: lb://movie-service/api/v1/movie-booking/movie
           predicates:
             - Path=/api/v1/movie-booking/movie/**
+          filters:
+            - AuthenticationFilter
         - id: booking-service
           uri: lb://booking-service/api/v1/movie-booking/booking
           predicates:
             - Path=/api/v1/movie-booking/booking/**
+          filters:
+            - AuthenticationFilter
+        - id: authentication-service
+          uri: lb://authentication-service/api/v1/movie-booking/auth
+          predicates:
+            - Path=/api/v1/movie-booking/auth/**
+          filters:
+            - AuthenticationFilter
 
 server:
   port: 9000
@@ -43,6 +57,11 @@ server:
     trust-store: "classpath:truststore/truststore.p12"
     trust-store-password: 12345678
 
+api:
+  routes:
+    ignored:
+      - "/api/v1/movie-booking/actuator"
+      - "/api/v1/movie-booking/auth/create"
 
 eureka:
 #  client:
@@ -65,6 +84,8 @@ management:
       exposure:
         include:
           - "*"
+
+
 
 #server.ssl.client-auth=need
 #

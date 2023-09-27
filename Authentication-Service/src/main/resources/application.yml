@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: authentication-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 9060
+  servlet:
+    context-path: /api/v1/movie-booking/auth
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
