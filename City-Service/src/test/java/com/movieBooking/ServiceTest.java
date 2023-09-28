@@ -1,19 +1,18 @@
 package com.movieBooking;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.movieBooking.DTO.CityRequest;
-import org.movieBooking.Entities.City;
-import org.movieBooking.Exceptions.DuplicateEntryException;
-import org.movieBooking.Exceptions.IdNotFoundException;
-import org.movieBooking.Repository.CityRepository;
-import org.movieBooking.Services.CityService;
-import org.movieBooking.Services.CityServiceImpl;
+import org.movieBooking.dto.CityRequest;
+import org.movieBooking.entities.City;
+import org.movieBooking.exceptions.DuplicateEntryException;
+import org.movieBooking.exceptions.IdNotFoundException;
+import org.movieBooking.repository.CityRepository;
+import org.movieBooking.services.CityService;
+import org.movieBooking.services.CityServiceImpl;
 
 import java.util.Optional;
 

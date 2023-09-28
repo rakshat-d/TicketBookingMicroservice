@@ -6,13 +6,13 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.movieBooking.DTO.MovieRequest;
-import org.movieBooking.Entities.Movie;
-import org.movieBooking.Exceptions.DuplicateEntryException;
-import org.movieBooking.Exceptions.IdNotFoundException;
-import org.movieBooking.Repository.MovieRepository;
-import org.movieBooking.Services.MovieService;
-import org.movieBooking.Services.MovieServiceImpl;
+import org.movieBooking.dto.MovieRequest;
+import org.movieBooking.entities.Movie;
+import org.movieBooking.exceptions.DuplicateEntryException;
+import org.movieBooking.exceptions.IdNotFoundException;
+import org.movieBooking.repository.MovieRepository;
+import org.movieBooking.services.MovieService;
+import org.movieBooking.services.MovieServiceImpl;
 
 import java.util.Optional;
 

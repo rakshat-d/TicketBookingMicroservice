@@ -44,6 +44,13 @@ public class CustomExceptionHandler {
         return ErrorResponse.builder().code(HttpStatus.UNAUTHORIZED.name()).message("Error Validating JWT Token").errors(List.of(error)).build();
     }
 
+    @ExceptionHandler(RuntimeException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ErrorResponse handleRuntimeExceptions(RuntimeException e) {
+        var error = Error.builder().errorCode(("Runtime.Exception")).message(e.getMessage()).build();
+        return ErrorResponse.builder().code(HttpStatus.INTERNAL_SERVER_ERROR.name()).message("Server error while processing the request").errors(List.of(error)).build();
+    }
+
     @ResponseStatus(BAD_REQUEST)
     @ResponseBody
     @ExceptionHandler(MethodArgumentNotValidException.class)
