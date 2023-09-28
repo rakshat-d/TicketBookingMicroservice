@@ -36,7 +36,7 @@ spring:
           filters:
             - AuthenticationFilter
         - id: authentication-service
-          uri: lb://authentication-service/api/v1/movie-booking/auth
+          uri: lb://authentication-server/api/v1/movie-booking/auth
           predicates:
             - Path=/api/v1/movie-booking/auth/**
           filters:
@@ -52,7 +52,7 @@ server:
     key-store-type: PKCS12
     key-store-password: 12345678
     protocol: TLS
-    client-auth: need
+    client-auth: none
     trust-store-type: PKCS12
     trust-store: "classpath:truststore/truststore.p12"
     trust-store-password: 12345678
