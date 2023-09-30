@@ -58,7 +58,6 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
             ServerHttpRequest request = exchange.getRequest();
             log.info("**************************************************************************");
             log.info("Excluded URLS: " + propertyConfig.getPropertyList("api.routes.excluded"));
-            log.info("ABC: " + propertyConfig.getProperty("abc"));
             log.info("URL is - " + request.getURI().getPath());
             String bearerToken = request.getHeaders().getFirst("Authorization");
             log.info("Bearer Token: "+ bearerToken);
@@ -67,7 +66,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 log.info("secured");
                 var client = webClientBuilder.build();
                 return client.get()
-                        .uri("http://AUTHENTICATION-SERVER/api/v1/movie-booking/auth/validate")
+                        .uri("http://AUTHENTICATION-SERVICE/api/v1/movie-booking/auth/validate")
                         .header("Authorization", bearerToken)
                         .retrieve().bodyToMono(ConnValidationResponse.class)
                         .map(response -> {

@@ -36,7 +36,7 @@ spring:
           filters:
             - AuthenticationFilter
         - id: authentication-service
-          uri: lb://authentication-server/api/v1/movie-booking/auth
+          uri: lb://authentication-service/api/v1/movie-booking/auth
           predicates:
             - Path=/api/v1/movie-booking/auth/**
           filters:
@@ -59,7 +59,7 @@ server:
 
 api:
   routes:
-    excluded: "/api/v1/movie-booking/actuator,/api/v1/movie-booking/auth/create"
+    excluded: "/api/v1/movie-booking/actuator,/api/v1/movie-booking/auth/create,/api/v1/movie-booking/auth/login"
 
 abc: 123
 

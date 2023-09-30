@@ -15,7 +15,7 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
 
 server:
-  port: 0
+  port: 9050
   servlet:
     context-path: /api/v1/movie-booking/auth
 

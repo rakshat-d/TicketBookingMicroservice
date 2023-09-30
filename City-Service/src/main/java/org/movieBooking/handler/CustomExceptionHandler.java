@@ -2,9 +2,11 @@ package org.movieBooking.handler;
 
 import org.movieBooking.dto.ErrorResponse;
 import org.movieBooking.dto.Error;
+import org.movieBooking.exceptions.AuthorizationFailedException;
 import org.movieBooking.exceptions.DuplicateEntryException;
 import org.movieBooking.exceptions.IdNotFoundException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -32,6 +34,13 @@ public class CustomExceptionHandler {
     public ErrorResponse HandleDuplicateEntryException(DuplicateEntryException e) {
         var error = Error.builder().errorCode("Duplicate.Entry").message(e.getMessage()).build();
         return ErrorResponse.builder().code(HttpStatus.CONFLICT.name()).message("Item Already Exists").errors(List.of(error)).build();
+    }
+
+    @ExceptionHandler(AuthorizationFailedException.class)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    public ErrorResponse HandleAuthorizationFailed(AuthorizationFailedException e) {
+        var error = Error.builder().errorCode("Not.Authorized").message(e.getMessage()).build();
+        return ErrorResponse.builder().code(HttpStatus.FORBIDDEN.name()).message("You are not authorized to access this resource").errors(List.of(error)).build();
     }
 
     @ResponseStatus(BAD_REQUEST)

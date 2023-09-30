@@ -1,8 +1,4 @@
-package org.movieBooking.security;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.movieBooking.enums.UserPermission;
+package org.movieBooking.enums;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -11,7 +7,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public enum UserRole {
-
     GUEST(new HashSet<>(List.of(UserPermission.ROLE_READ_ONLY))),
     USER(new HashSet<>(Arrays.asList(UserPermission.ROLE_USER, UserPermission.ROLE_WRITE_ONLY))),
     MODERATOR(new HashSet<>(Arrays.asList(UserPermission.ROLE_READ_ONLY, UserPermission.ROLE_WRITE_ONLY, UserPermission.ROLE_READ_ONLY_ADMIN))),
@@ -23,8 +18,7 @@ public enum UserRole {
         this.permissions=permissions;
     }
 
-    public Set<GrantedAuthority> getAuthorities() {
-        return this.permissions.stream().map(authority -> new SimpleGrantedAuthority(authority.name())).collect(Collectors.toSet());
-    }
-
+//    public Set<GrantedAuthority> getAuthorities() {
+//        return this.permissions.stream().map(authority -> new SimpleGrantedAuthority(authority.name())).collect(Collectors.toSet());
+//    }
 }

@@ -16,6 +16,7 @@
         <module>DiscoveryService</module>
         <module>ApiGateway</module>
         <module>Authentication-Service</module>
+        <module>Authorization</module>
     </modules>
 
     <properties>
