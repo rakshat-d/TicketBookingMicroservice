@@ -1,0 +1,9 @@
+spring:
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: 6379
+  datasource:
+    url: jdbc:mysql://${MY_SQL_HOST}:${MY_SQL_PORT}/auth-db?createDatabaseIfNotExist=true
+    username: ${MY_SQL_USER}
+    password: ${MY_SQL_PASS}

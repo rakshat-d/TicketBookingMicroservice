@@ -1,21 +1,10 @@
 version: "3"
 services:
-  mysql-container:
-    image: "mysql:latest"
-    ports:
-      - "3305:3306"
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_ROOT_USER: 'root'
-  redis:
-    image: "redis:latest"
-    restart: 'on-failure'
-    ports:
-      - "6379:6379"
   eureka-container:
     restart: always
     image: "pixalquarks/bookingsystemdiscoveryservice:master"
+    hostname: eureka-container
+    mem_limit: 200m
     ports:
       - "8761:8761"
   api-gateway:
@@ -23,10 +12,12 @@ services:
       - eureka-container
     restart: always
     image: "pixalquarks/bookingsystemapigateway:master"
+    mem_limit: 200m
+    hostname: api-gateway
     ports:
       - "9000:9000"
     environment:
-      SPRING_APPLICATION_JSON: '{
+     SPRING_APPLICATION_JSON: '{
         "server.ssl.enabled" : false,
         "server.ssl.client-auth" : "none",
         "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
@@ -34,67 +25,47 @@ services:
       }'
   city-service:
     depends_on:
-      - mysql-container
       - eureka-container
       - api-gateway
     image: "pixalquarks/bookingsystemcityservice:master"
+    mem_limit: 200m
+    hostname: city-service
     environment:
-      SPRING_APPLICATION_JSON: '{
-         "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
-         "spring.datasource.username" : "root",
-         "spring.datasource.password" : "root",
-         "spring.datasource.url" : "jdbc:mysql://mysql-container:3306/city-db?createDatabaseIfNotExist=true"
-      }'
+      SPRING_PROFILES_ACTIVE: aws
   movie-service:
     depends_on:
       - api-gateway
       - eureka-container
-      - mysql-container
     image: "pixalquarks/bookingsystemmovieservice:master"
+    mem_limit: 200m
+    hostname: movie-service
     environment:
-      SPRING_APPLICATION_JSON: '{
-             "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
-             "spring.datasource.username" : "root",
-             "spring.datasource.password" : "root",
-             "spring.datasource.url" : "jdbc:mysql://mysql-container:3306/movie-db?createDatabaseIfNotExist=true"
-          }'
+      SPRING_PROFILES_ACTIVE: aws
   theatre-service:
     depends_on:
       - api-gateway
       - eureka-container
-      - mysql-container
     image: "pixalquarks/bookingsystemtheatreservice:master"
+    mem_limit: 200m
+    hostname: theatre-service
     environment:
-      SPRING_APPLICATION_JSON: '{
-              "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
-              "spring.datasource.username" : "root",
-              "spring.datasource.password" : "root",
-              "spring.datasource.url" : "jdbc:mysql://mysql-container:3306/theatre-db?createDatabaseIfNotExist=true"
-           }'
+      SPRING_PROFILES_ACTIVE: aws
   booking-service:
     depends_on:
       - api-gateway
       - eureka-container
-      - mysql-container
     image: "pixalquarks/bookingsystembookingservice:master"
+    mem_limit: 200m
+    hostname: booking-service
     environment:
-      SPRING_APPLICATION_JSON: '{
-               "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
-               "spring.datasource.username" : "root",
-               "spring.datasource.password" : "root",
-               "spring.datasource.url" : "jdbc:mysql://mysql-container:3306/booking-db?createDatabaseIfNotExist=true"
-            }'
+      SPRING_PROFILES_ACTIVE: aws
   authentication-service:
     depends_on:
       - eureka-container
-      - redis
     image: "pixalquarks/bookingsystemauthenticationservice:master"
+    mem_limit: 200m
+    hostname: authentication-service
     environment:
-      SPRING_APPLICATION_JSON: '{
-             "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
-             "spring.datasource.username" : "root",
-             "spring.datasource.password" : "root",
-             "spring.datasource.url" : "jdbc:mysql://mysql-container:3306/auth-db?createDatabaseIfNotExist=true"
-          }'
+      SPRING_PROFILES_ACTIVE: aws
 
 
