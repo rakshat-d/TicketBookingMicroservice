@@ -32,33 +32,33 @@ services:
     hostname: city-service
     environment:
       SPRING_PROFILES_ACTIVE: aws
-  movie-service:
-    depends_on:
-      - api-gateway
-      - eureka-container
-    image: "pixalquarks/bookingsystemmovieservice:master"
-    mem_limit: 200m
-    hostname: movie-service
-    environment:
-      SPRING_PROFILES_ACTIVE: aws
-  theatre-service:
-    depends_on:
-      - api-gateway
-      - eureka-container
-    image: "pixalquarks/bookingsystemtheatreservice:master"
-    mem_limit: 200m
-    hostname: theatre-service
-    environment:
-      SPRING_PROFILES_ACTIVE: aws
-  booking-service:
-    depends_on:
-      - api-gateway
-      - eureka-container
-    image: "pixalquarks/bookingsystembookingservice:master"
-    mem_limit: 200m
-    hostname: booking-service
-    environment:
-      SPRING_PROFILES_ACTIVE: aws
+  # movie-service:
+  #   depends_on:
+  #     - api-gateway
+  #     - eureka-container
+  #   image: "pixalquarks/bookingsystemmovieservice:master"
+  #   mem_limit: 200m
+  #   hostname: movie-service
+  #   environment:
+  #     SPRING_PROFILES_ACTIVE: aws
+  # theatre-service:
+  #   depends_on:
+  #     - api-gateway
+  #     - eureka-container
+  #   image: "pixalquarks/bookingsystemtheatreservice:master"
+  #   mem_limit: 200m
+  #   hostname: theatre-service
+  #   environment:
+  #     SPRING_PROFILES_ACTIVE: aws
+  # booking-service:
+  #   depends_on:
+  #     - api-gateway
+  #     - eureka-container
+  #   image: "pixalquarks/bookingsystembookingservice:master"
+  #   mem_limit: 200m
+  #   hostname: booking-service
+  #   environment:
+  #     SPRING_PROFILES_ACTIVE: aws
   authentication-service:
     depends_on:
       - eureka-container
