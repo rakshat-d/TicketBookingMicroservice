@@ -4,29 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Changed package names to small case">
-      <change afterPath="$PROJECT_DIR$/Authorization/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/annotations/HasRoles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/aspect/AuthorizationAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/enums/UserPermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/enums/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/exceptions/AuthorizationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/util/VerifyRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Added authorization HasRoles annotation to verify role based authorization">
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/GatewayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/HttpsConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/filters/RestAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/filters/RestAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/UserPermission.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication-Service/src/main/java/org/movieBooking/security/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication-Service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication-Service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/City-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/City-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/controller/CityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/handler/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/City-Service/src/main/java/org/movieBooking/handler/CustomExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/City-Service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/City-Service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,7 +78,7 @@
       <command value="mvn clean install -DskipTests" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CityService">
+  <component name="RunManager" selected="Application.ApiGateway">
     <configuration name="ApiGateway" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.movieBooking.ApiGateway" />
       <module name="ApiGateway" />
@@ -199,9 +183,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiGateway" />
         <item itemvalue="Application.CityService" />
         <item itemvalue="Application.AuthenticationService" />
-        <item itemvalue="Application.ApiGateway" />
         <item itemvalue="Application.DiscoveryService" />
         <item itemvalue="Application.MovieService" />
       </list>
@@ -432,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695925403155</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added authorization HasRoles annotation to verify role based authorization">
+      <option name="closed" value="true" />
+      <created>1696057347054</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1696057347054</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -466,7 +458,8 @@
     <MESSAGE value="Updated docker compose" />
     <MESSAGE value="Edited api gateway application.yml" />
     <MESSAGE value="Changed package names to small case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed package names to small case" />
+    <MESSAGE value="Added authorization HasRoles annotation to verify role based authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added authorization HasRoles annotation to verify role based authorization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

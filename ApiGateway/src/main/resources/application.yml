@@ -42,8 +42,11 @@ spring:
           filters:
             - AuthenticationFilter
 
+
+
 server:
   port: 9000
+
   servlet:
     context-path: api/v1/movie-booking/
   ssl:
@@ -61,7 +64,6 @@ api:
   routes:
     excluded: "/api/v1/movie-booking/actuator,/api/v1/movie-booking/auth/create,/api/v1/movie-booking/auth/login"
 
-abc: 123
 
 eureka:
 #  client:
