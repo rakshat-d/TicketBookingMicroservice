@@ -4,7 +4,7 @@ services:
     restart: always
     image: "pixalquarks/bookingsystemdiscoveryservice:master"
     hostname: eureka-container
-    mem_limit: 300m
+    mem_limit: 500m
     ports:
       - "8761:8761"
   api-gateway:
@@ -12,7 +12,7 @@ services:
       - eureka-container
     restart: always
     image: "pixalquarks/bookingsystemapigateway:master"
-    mem_limit: 300m
+    mem_limit: 500m
     hostname: api-gateway
     ports:
       - "9000:9000"
@@ -23,15 +23,15 @@ services:
         "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
         "server.ssl.keystore" : "classpath:keystore/dockerPlayKeystore.p12"
       }'
-  city-service:
-    depends_on:
-      - eureka-container
-      - api-gateway
-    image: "pixalquarks/bookingsystemcityservice:master"
-    mem_limit: 300m
-    hostname: city-service
-    environment:
-      SPRING_PROFILES_ACTIVE: aws
+  # city-service:
+  #   depends_on:
+  #     - eureka-container
+  #     - api-gateway
+  #   image: "pixalquarks/bookingsystemcityservice:master"
+  #   mem_limit: 300m
+  #   hostname: city-service
+  #   environment:
+  #     SPRING_PROFILES_ACTIVE: aws
   # movie-service:
   #   depends_on:
   #     - api-gateway
@@ -59,13 +59,13 @@ services:
   #   hostname: booking-service
   #   environment:
   #     SPRING_PROFILES_ACTIVE: aws
-  authentication-service:
-    depends_on:
-      - eureka-container
-    image: "pixalquarks/bookingsystemauthenticationservice:master"
-    mem_limit: 300m
-    hostname: authentication-service
-    environment:
-      SPRING_PROFILES_ACTIVE: aws
+  # authentication-service:
+  #   depends_on:
+  #     - eureka-container
+  #   image: "pixalquarks/bookingsystemauthenticationservice:master"
+  #   mem_limit: 300m
+  #   hostname: authentication-service
+  #   environment:
+  #     SPRING_PROFILES_ACTIVE: aws
 
 
