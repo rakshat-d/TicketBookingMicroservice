@@ -15,6 +15,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: Movie Booking
           environment_name: MovieBooking-env
-          version_label: 2
+          version_label: ${{ secrets.AWS_DEPLOY_VERSION }}
           region: ap-south-1
           deployment_package: deploy.zip
