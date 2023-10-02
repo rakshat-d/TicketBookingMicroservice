@@ -27,6 +27,8 @@ services:
       - "9000:9000"
     environment:
       SPRING_APPLICATION_JSON: '{
+        "server.ssl.enabled" : false,
+        "server.ssl.client-auth" : "none",
         "eureka.client.service-url.defaultZone" : "http://eureka-container:8761/eureka/",
         "server.ssl.keystore" : "classpath:keystore/dockerPlayKeystore.p12"
       }'
