@@ -17,4 +17,4 @@ jobs:
           environment_name: MovieBooking-env
           version_label: 1
           region: ap-south-1
-          deployment_packge: deploy.zip
+          deployment_package: deploy.zip
