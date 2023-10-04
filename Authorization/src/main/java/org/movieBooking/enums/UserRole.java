@@ -18,6 +18,10 @@ public enum UserRole {
         this.permissions=permissions;
     }
 
+    public Set<UserPermission> getPermissions() {
+        return this.permissions;
+    }
+
 //    public Set<GrantedAuthority> getAuthorities() {
 //        return this.permissions.stream().map(authority -> new SimpleGrantedAuthority(authority.name())).collect(Collectors.toSet());
 //    }

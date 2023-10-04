@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86690114-794b-4ddc-a08e-5550ed976fb7" name="Changes" comment="Added authorization HasRoles annotation to verify role based authorization">
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/GatewayConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/HttpsConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/org/movieBooking/filter/HttpsConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/annotations/HasRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/annotations/HasRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/enums/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/enums/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/util/VerifyRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/util/VerifyRole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,7 @@
       <command value="mvn clean install -DskipTests" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ApiGateway">
+  <component name="RunManager" selected="Application.CityService">
     <configuration name="ApiGateway" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.movieBooking.ApiGateway" />
       <module name="ApiGateway" />
@@ -183,10 +184,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGateway" />
         <item itemvalue="Application.CityService" />
         <item itemvalue="Application.AuthenticationService" />
         <item itemvalue="Application.DiscoveryService" />
+        <item itemvalue="Application.ApiGateway" />
         <item itemvalue="Application.MovieService" />
       </list>
     </recent_temporary>
@@ -545,6 +546,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Authorization/src/main/java/org/movieBooking/util/VerifyRole.java</url>
+          <line>14</line>
+          <properties class="org.movieBooking.util.VerifyRole" method="verify">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
